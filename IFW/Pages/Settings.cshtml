@@ -1,0 +1,131 @@
+﻿@page
+@model IFW.Pages.SettingsModel
+@{
+}
+<h1>Admin Settings</h1>
+<p>Create a new user</p>
+<div>@TempData["UserAdded"]</div>
+<div class="container border p-5">
+    <form method="post">
+
+        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+
+        <div class="input-group row mb-2">
+            <div class="col-2">
+                <label asp-for="NewUser.UserName"></label>
+            </div>
+            <div class="col-5">
+                <input type="text" asp-for="NewUser.UserName" class="form-control" />
+            </div>
+            <div class="col-3">
+            <span class="text-danger" asp-validation-for="NewUser.UserName"></span>
+            </div>
+        </div>
+
+        <div class="input-group row mb-2">
+            <div class="col-2">
+                <label asp-for="NewUser.Password"></label>
+            </div>
+            <div class="col-5">
+                <input type="text" asp-for="NewUser.Password" class="form-control" />
+            </div>
+            <div class="col-3">
+                <span class="text-danger" asp-validation-for="NewUser.Password"></span>
+            </div>
+        </div>
+
+        <div class="input-group row mb-2">
+            <div class="col-2">
+                <label asp-for="NewUser.FirstName"></label>
+            </div>
+            <div class="col-5">
+                <input type="text" asp-for="NewUser.FirstName" class="form-control" />
+            </div>
+            <div class="col-3">
+                <span class="text-danger" asp-validation-for="NewUser.FirstName"></span>
+            </div>
+        </div>
+
+        <div class="input-group row mb-2">
+            <div class="col-2">
+                <label asp-for="NewUser.Surname"></label>
+            </div>
+            <div class="col-5">
+                <input type="text" asp-for="NewUser.Surname" class="form-control" />
+            </div>
+            <div class="col-3">
+                <span class="text-danger" asp-validation-for="NewUser.Surname"></span>
+            </div>
+        </div>
+
+        <div class="input-group row mb-2">
+            <div class="col-2">
+                <label asp-for="NewUser.Email"></label>
+            </div>
+            <div class="col-5">
+                <input type="text" asp-for="NewUser.Email" class="form-control" />
+            </div>
+            <div class="col-3">
+                <span class="text-danger" asp-validation-for="NewUser.Email"></span>
+            </div>
+        </div>
+
+        <div class="input-group row mb-2">
+            <div class="col-2">
+                <label asp-for="NewUser.DepartmentName"></label>
+            </div>
+            <div class="col-5">
+                <input type="text" asp-for="NewUser.DepartmentName" class="form-control" />
+            </div>
+            <div class="col-3">
+                <span class="text-danger" asp-validation-for="NewUser.DepartmentName"></span>
+            </div>
+        </div>
+
+        <div class="input-group row mb-2">
+            <div class="col-2">
+                <label asp-for="NewUser.IsManager"></label>
+            </div>
+            <div class="col-5">
+                <input type="text" asp-for="NewUser.IsManager" class="form-control" />
+            </div>
+            <div class="col-3">
+                <span class="text-danger" asp-validation-for="NewUser.IsManager"></span>
+            </div>
+        </div>
+
+        <div class="input-group row mb-2">
+            <div class="col-2">
+                <label asp-for="NewUser.IsAdmin"></label>
+            </div>
+            <div class="col-5">
+                <input type="text" asp-for="NewUser.IsAdmin" class="form-control" />
+            </div>
+            <div class="col-3">
+                <span class="text-danger" asp-validation-for="NewUser.IsAdmin"></span>
+            </div>
+        </div>
+
+        <div class="input-group row mb-2">
+            <div class="col-2">
+                <label asp-for="NewUser.EmploymentDate"></label>
+            </div>
+            <div class="col-5">
+                <input type="text" asp-for="NewUser.EmploymentDate" class="form-control" />
+            </div>
+            <div class="col-3">
+                <span class="text-danger" asp-validation-for="NewUser.EmploymentDate"></span>
+            </div>
+        </div>
+
+          <div class="input-group row">
+            <div class="col-2">
+
+            </div>
+            <div class="col-5">
+                <input type="submit" value="Create New User" class="btn btn-primary" />
+            </div>
+        </div>
+
+    </form>
+</div>
